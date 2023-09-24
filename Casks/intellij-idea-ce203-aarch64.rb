@@ -1,4 +1,4 @@
-cask "intellij-idea-ce203" do
+cask "intellij-idea-ce203-aarch64" do
     version "2020.3.4,203.8084.24"
   
     url "https://download.jetbrains.com/idea/ideaIC-#{version.csv.first}-aarch64.dmg"
