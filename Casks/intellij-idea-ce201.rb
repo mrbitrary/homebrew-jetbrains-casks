@@ -11,7 +11,7 @@ cask "intellij-idea-ce201" do
     auto_updates true
     conflicts_with cask: "intellij-idea-ce"
   
-    app "IntelliJ IDEA CE.app"
+    app "IntelliJ IDEA CE (v20.1).app"
   
     uninstall_postflight do
       ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "idea") }.each do |path|

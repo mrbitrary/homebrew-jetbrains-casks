@@ -9,9 +9,13 @@ cask "intellij-idea-ce203-aarch64" do
     homepage "https://www.jetbrains.com/idea/"
   
     auto_updates true
-    conflicts_with cask: "intellij-idea-ce"
-  
-    app "IntelliJ IDEA CE.app"
+    conflicts_with cask: [
+      "intellij-idea-ce",
+      "intellij-idea-ce19",
+      "intellij-idea-ce203"
+    ]
+
+    app "IntelliJ IDEA CE (v20.3).app"
   
     uninstall_postflight do
       ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "idea") }.each do |path|

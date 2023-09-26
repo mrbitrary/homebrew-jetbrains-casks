@@ -1,8 +1,8 @@
-cask "intellij-idea-ce203" do
-    version "2020.3.4,203.8084.24"
+cask "intellij-idea-ce191" do
+    version "2019.1.4,191.8026.42"
   
     url "https://download.jetbrains.com/idea/ideaIC-#{version.csv.first}.dmg"
-    sha256 "9AD2333C6AE3F051CE7CA59140178107C3DE8F0B929A6B123D97E89FB12FDD7E"
+    sha256 "45e5d4454b7af328c9c1279559a49d8db80eea8eaa1187ff0fc1cc3643074be9"
   
     name "IntelliJ IDEA Community Edition"
     desc "IDE for Java development - community edition"
@@ -12,10 +12,10 @@ cask "intellij-idea-ce203" do
     conflicts_with cask: [
       "intellij-idea-ce",
       "intellij-idea-ce19",
-      "intellij-idea-ce203-aarch64"
+      "intellij-idea-ce191-jbr11"
     ]
   
-    app "IntelliJ IDEA CE (v20.3).app"
+    app "IntelliJ IDEA CE (19.1).app"
   
     uninstall_postflight do
       ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "idea") }.each do |path|
